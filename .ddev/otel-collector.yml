@@ -7,7 +7,7 @@ receivers:
   otlp:
     protocols:
       grpc:
-      http: "0.0.0.0:4318"
+      http:
 
   # Dummy receiver that's never used, because a pipeline is required to have one.
   otlp/spanmetrics:
