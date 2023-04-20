@@ -1,2 +1,2 @@
 web_environment:
-  - "OTEL_COLLECTOR=http://127.0.0.1:4318"
+  - "OTEL_COLLECTOR=http://127.0.0.1:4318/v1/traces"
