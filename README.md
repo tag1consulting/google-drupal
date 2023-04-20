@@ -8,4 +8,4 @@ Automated performance testing and telemetry with Drupal core.
 1. `cp phpunit.xml.example web/core/phpunit.xml`
 1. `ddev ssh`
 1. `cd web/core`
-1. `../../vendor/bin/phpunit profiles/demo_umami/tests/src/FunctionalJavaScript/PerformanceTest.php`
+1. `../../vendor/bin/phpunit profiles/demo_umami/tests/src/FunctionalJavascript/PerformanceTest.php`
