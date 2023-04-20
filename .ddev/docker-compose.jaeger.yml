@@ -10,7 +10,7 @@ services:
       - "16686:16686"
     networks:
       - jaeger
-  otel_collector:
+  otelcollector:
     image: otel/opentelemetry-collector-contrib:latest
     volumes:
       - "./otel-collector.yml:/etc/otelcol/otel-collector-config.yml"
