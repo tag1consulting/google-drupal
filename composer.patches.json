@@ -2,7 +2,7 @@
   "patches": {
     "drupal/core": {
        "PerformanceTestBase https://www.drupal.org/project/drupal/issues/3346765": "https://git.drupalcode.org/project/drupal/-/merge_requests/3617.diff",
-      "Add OpenTelemetry instrumentation.": "https://www.drupal.org/files/issues/2023-04-20/3352459-6.patch"
+      "Add OpenTelemetry instrumentation.": "https://www.drupal.org/files/issues/2023-04-21/3352459-8.patch"
     }
   }
 }
