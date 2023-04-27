@@ -6,6 +6,7 @@ services:
     volumes:
       - /dev/shm:/dev/shm
     shm_size: 2gb
+    init: true
     labels:
     # These labels ensure this service is discoverable by ddev
       com.ddev.site-name: ${DDEV_SITENAME}
@@ -16,5 +17,3 @@ services:
   web:
     links:
       - chromedriver:$DDEV_HOSTNAME
-    environment:
-      - MINK_DRIVER_ARGS_WEBDRIVER=["chrome", {"browserName":"chrome","chromeOptions":{"args":["--disable-gpu","--headless", "--no-sandbox"]}}, "http://chromedriver:9515"]
