@@ -17,11 +17,11 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core": "10.1.x",
+        "drupal/core": "11.x",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-dev": "^10.0",
         "drupal/core-project-message": "^10.0",
-        "drupal/core-recommended": "10.1.x"
+        "drupal/core-recommended": "11.x"
     },
     "conflict": {
         "drupal/drupal": "*"
