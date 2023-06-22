@@ -1,7 +1,7 @@
 {
   "patches": {
     "drupal/core": {
-      "Add OpenTelemetry instrumentation.": "https://www.drupal.org/files/issues/2023-06-16/3352459-19.patch"
+      "Issue #3352459 Log traces from performance tests to OpenTelemetry": "https://git.drupalcode.org/project/drupal/-/merge_requests/4226.diff"
     }
   }
 }
