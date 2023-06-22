@@ -101,9 +101,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "require-dev": {
-        "open-telemetry/sdk": "^0.0.17",
-        "php-http/guzzle7-adapter": "^1.0"
     }
 }
