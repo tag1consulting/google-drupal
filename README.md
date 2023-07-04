@@ -11,6 +11,7 @@ Automated performance testing and telemetry with Drupal core.
 1. Using docker container ls, get the container name for for your Drupal ddev webserver
 1. Connect your ddev container to the signoz network: `docker network connect clickhouse-setup_default [your-ddev-webserver-container-id]`
 1. You can check if this networking step worked by running ddev ssh, then `http://otel-collector:4318/api/traces` - if you get a 404, it worked.
+1. signoz has some limits on the community edition dashboard, remove these by running ```UPDATE feature_status SET usage_limit = -1 WHERE name = 'QUERY_BUILDER_PANELS'``` against signoz.db, which can be found in ```signoz/deploy/docker/clickhouse-setup/data/signoz/signoz.db```
 1. Once these steps are working, do the following to run tests and log traces.
 1. `ddev ssh`
 1. `cd web/core`
