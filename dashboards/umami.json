@@ -84,15 +84,15 @@
             "type": "tempo",
             "uid": "tempo"
           },
-          "limit": 20,
+          "limit": 1000,
           "queryType": "nativeSearch",
           "refId": "A",
-          "search": "service.version=${version}\n",
+          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
           "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
-          "spanName": "GET <front>"
+          "spanName": "largestContentfulPaint"
         }
       ],
-      "title": "<front> anonymous umami",
+      "title": "<front> anonymous umami LCP",
       "type": "stat"
     },
     {
@@ -151,15 +151,149 @@
             "type": "tempo",
             "uid": "tempo"
           },
-          "limit": 20,
+          "limit": 1000,
           "queryType": "nativeSearch",
           "refId": "A",
-          "search": "service.version=${version}",
+          "search": "service.version=${version}\nhttp.url=node/1",
           "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
-          "spanName": "GET node/1"
+          "spanName": "largestContentfulPaint"
         }
       ],
-      "title": "node/1 anonymous umami",
+      "title": "node/1 anonymous umami LCP",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "tempo",
+        "uid": "tempo"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1000
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "tempo",
+            "uid": "tempo"
+          },
+          "limit": 1000,
+          "queryType": "nativeSearch",
+          "refId": "A",
+          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "spanName": "First Byte"
+        }
+      ],
+      "title": "<front> anonymous umami ttfb",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "tempo",
+        "uid": "tempo"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1000
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "tempo",
+            "uid": "tempo"
+          },
+          "limit": 1000,
+          "queryType": "nativeSearch",
+          "refId": "A",
+          "search": "service.version=${version}\nhttp.url=node/1",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "spanName": "First Byte"
+        }
+      ],
+      "title": "node/1 anonymous umami ttfb",
       "type": "stat"
     },
     {
@@ -201,7 +335,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 16
       },
       "id": 8,
       "options": {
@@ -272,7 +406,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 16
       },
       "id": 9,
       "options": {
@@ -301,7 +435,7 @@
           "spanName": "GET node/1"
         }
       ],
-      "title": "node/1 anonymous standard umami",
+      "title": "node/1 anonymous umami",
       "type": "table"
     }
   ],
@@ -348,13 +482,13 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Umami",
   "uid": "fTmhuXr4k",
-  "version": 17,
+  "version": 35,
   "weekStart": ""
 }
