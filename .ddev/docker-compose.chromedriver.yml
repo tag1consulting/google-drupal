@@ -2,7 +2,7 @@ version: '3.6'
 services:
   chromedriver:
     container_name: ddev-${DDEV_SITENAME}-chromedriver
-    image: drupalci/chromedriver:production
+    image: drupalci/webdriver-chromedriver:production
     volumes:
       - /dev/shm:/dev/shm
     shm_size: 2gb
