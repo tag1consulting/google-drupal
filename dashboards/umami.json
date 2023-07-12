@@ -88,11 +88,11 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
           "spanName": "largestContentfulPaint"
         }
       ],
-      "title": "<front> anonymous umami LCP",
+      "title": "<front> anonymous umami LCP (warm)",
       "type": "stat"
     },
     {
@@ -155,11 +155,11 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=${version}\nhttp.url=node/1",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
           "spanName": "largestContentfulPaint"
         }
       ],
-      "title": "node/1 anonymous umami LCP",
+      "title": "node/1 anonymous umami LCP (warm)",
       "type": "stat"
     },
     {
@@ -196,7 +196,7 @@
         "x": 0,
         "y": 8
       },
-      "id": 11,
+      "id": 14,
       "options": {
         "colorMode": "value",
         "graphMode": "area",
@@ -222,11 +222,11 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
-          "spanName": "First Byte"
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
+          "spanName": "firstContentfulPaint"
         }
       ],
-      "title": "<front> anonymous umami ttfb",
+      "title": "<front> anonymous umami FCP (warm)",
       "type": "stat"
     },
     {
@@ -263,6 +263,140 @@
         "x": 12,
         "y": 8
       },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "tempo",
+            "uid": "tempo"
+          },
+          "limit": 1000,
+          "queryType": "nativeSearch",
+          "refId": "A",
+          "search": "service.version=${version}\nhttp.url=node/1",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
+          "spanName": "firstContentfulPaint"
+        }
+      ],
+      "title": "node/1 anonymous umami FCP (warm)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "tempo",
+        "uid": "tempo"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1000
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "tempo",
+            "uid": "tempo"
+          },
+          "limit": 1000,
+          "queryType": "nativeSearch",
+          "refId": "A",
+          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
+          "spanName": "First Byte"
+        }
+      ],
+      "title": "<front> anonymous umami ttfb (warm)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "tempo",
+        "uid": "tempo"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1000
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
       "id": 12,
       "options": {
         "colorMode": "value",
@@ -289,11 +423,11 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=${version}\nhttp.url=node/1",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
           "spanName": "First Byte"
         }
       ],
-      "title": "node/1 anonymous umami ttfb",
+      "title": "node/1 anonymous umami ttfb (warm)",
       "type": "stat"
     },
     {
@@ -335,7 +469,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 24
       },
       "id": 8,
       "options": {
@@ -360,7 +494,7 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=${version}",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
           "spanName": "GET <front>"
         }
       ],
@@ -406,7 +540,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 24
       },
       "id": 9,
       "options": {
@@ -431,7 +565,7 @@
           "queryType": "nativeSearch",
           "refId": "A",
           "search": "service.version=\"${version}\"",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testPagesAnonymous",
+          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
           "spanName": "GET node/1"
         }
       ],
@@ -482,13 +616,13 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Umami",
   "uid": "fTmhuXr4k",
-  "version": 35,
+  "version": 4,
   "weekStart": ""
 }
