@@ -130,7 +130,7 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "exemplar": true,
+          "exemplar": false,
           "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"largestContentfulPaint\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"largestContentfulPaint\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "interval": "",
@@ -145,7 +145,7 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "exemplar": true,
+          "exemplar": false,
           "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"firstByte\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"firstByte\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "key": "Q-aa965e13-fe86-4b93-969a-67103cfb0de3-1",
@@ -159,7 +159,7 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "exemplar": true,
+          "exemplar": false,
           "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"firstContentfulPaint\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"firstContentfulPaint\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "key": "Q-b1eca1af-d431-4c73-8675-10640c1bbec1-2",
@@ -276,23 +276,9 @@
       },
       {
         "current": {
-          "selected": true,
-          "text": [
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageColdCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageLukeWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageColdCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageLukeWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
-          ],
-          "value": [
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageColdCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageLukeWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageColdCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageLukeWarmCache",
-            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
-          ]
+          "selected": false,
+          "text": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
+          "value": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
         },
         "datasource": {
           "type": "prometheus",
@@ -300,7 +286,7 @@
         },
         "definition": "label_values(service)",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": "Test",
         "multi": true,
         "name": "test",
@@ -325,6 +311,6 @@
   "timezone": "",
   "title": "Umami",
   "uid": "teMVIdjVz",
-  "version": 27,
+  "version": 30,
   "weekStart": ""
 }
