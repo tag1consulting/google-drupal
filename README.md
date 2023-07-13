@@ -9,6 +9,7 @@ Automated performance testing and telemetry with Drupal core.
 1. Once these steps are working, do the following to run tests and log traces.
 1. `ddev ssh`
 1. `cd web/core`
-1. `../../vendor/bin/phpunit --group Performance`
+1. `../../vendor/bin/phpunit --group OpenTelemetry`
+1. Run the tests at least three times to populate time series data.
 1. Go to http://localhost:3000 to see the traces in the grafana  UI (under explore)
 1. Go to dashboards in the grafana UI, then import the Umami dashboard from the /dashboards folder
