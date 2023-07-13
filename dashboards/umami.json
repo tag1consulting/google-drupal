@@ -36,9 +36,11 @@
         "x": 0,
         "y": 0
       },
-      "id": 8,
+      "id": 14,
       "panels": [],
-      "title": "node/1 anonymous (warm caches)",
+      "repeat": "test",
+      "repeatDirection": "h",
+      "title": "$test",
       "type": "row"
     },
     {
@@ -108,7 +110,7 @@
         "x": 0,
         "y": 1
       },
-      "id": 4,
+      "id": 11,
       "options": {
         "legend": {
           "calcs": [],
@@ -129,7 +131,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"largestContentfulPaint\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"largestContentfulPaint\"}[1m]))",
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"largestContentfulPaint\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"largestContentfulPaint\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "interval": "",
           "key": "Q-505f909c-1512-491a-b41c-c0d5731ef8ea-0",
@@ -144,7 +146,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"firstByte\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"firstByte\"}[1m]))",
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"firstByte\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"firstByte\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "key": "Q-aa965e13-fe86-4b93-969a-67103cfb0de3-1",
           "legendFormat": "TTFB",
@@ -158,7 +160,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"firstContentfulPaint\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"firstContentfulPaint\"}[1m]))",
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"$test\",span_name=\"firstContentfulPaint\",service_version=\"$version\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"$test\",span_name=\"firstContentfulPaint\",service_version=\"$version\"}[1m]))",
           "instant": false,
           "key": "Q-b1eca1af-d431-4c73-8675-10640c1bbec1-2",
           "legendFormat": "FCP",
@@ -231,30 +233,98 @@
           "limit": 20,
           "queryType": "nativeSearch",
           "refId": "A",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
-          "spanName": "GET node/1"
+          "search": "service.version=\"$version\"",
+          "serviceName": "$test"
         }
       ],
       "title": "Traces",
       "type": "table"
     }
   ],
-  "refresh": "",
+  "refresh": "30s",
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "11.0-dev",
+          "value": "11.0-dev"
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "definition": "label_values(service_version)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "version",
+        "options": [],
+        "query": {
+          "query": "label_values(service_version)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageColdCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageLukeWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageColdCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageLukeWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
+          ],
+          "value": [
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageColdCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageLukeWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageColdCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageLukeWarmCache",
+            "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "definition": "label_values(service)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Test",
+        "multi": true,
+        "name": "test",
+        "options": [],
+        "query": {
+          "query": "label_values(service)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Umami (averages)",
+  "title": "Umami",
   "uid": "teMVIdjVz",
-  "version": 12,
+  "version": 27,
   "weekStart": ""
 }
