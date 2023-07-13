@@ -29,477 +29,145 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
+      "collapsed": false,
       "gridPos": {
-        "h": 8,
-        "w": 12,
+        "h": 1,
+        "w": 24,
         "x": 0,
         "y": 0
-      },
-      "id": 10,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-          "spanName": "largestContentfulPaint"
-        }
-      ],
-      "title": "<front> anonymous umami LCP (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 0
-      },
-      "id": 7,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=node/1",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
-          "spanName": "largestContentfulPaint"
-        }
-      ],
-      "title": "node/1 anonymous umami LCP (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 8
-      },
-      "id": 14,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-          "spanName": "firstContentfulPaint"
-        }
-      ],
-      "title": "<front> anonymous umami FCP (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 8
-      },
-      "id": 13,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=node/1",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
-          "spanName": "firstContentfulPaint"
-        }
-      ],
-      "title": "node/1 anonymous umami FCP (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 16
-      },
-      "id": 11,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=\"<front>\"\n",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-          "spanName": "First Byte"
-        }
-      ],
-      "title": "<front> anonymous umami ttfb (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1000
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 16
-      },
-      "id": 12,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.4.3",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
-          },
-          "limit": 1000,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}\nhttp.url=node/1",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
-          "spanName": "First Byte"
-        }
-      ],
-      "title": "node/1 anonymous umami ttfb (warm)",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "tempo"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 24
       },
       "id": 8,
-      "options": {
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "sum"
-          ],
-          "show": false
-        },
-        "showHeader": true
+      "panels": [],
+      "title": "node/1 anonymous (warm caches)",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
       },
-      "pluginVersion": "9.4.3",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "points",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
       "targets": [
         {
           "datasource": {
-            "type": "tempo",
-            "uid": "tempo"
+            "type": "prometheus",
+            "uid": "prometheus"
           },
-          "limit": 20,
-          "queryType": "nativeSearch",
-          "refId": "A",
-          "search": "service.version=${version}",
-          "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testFrontPageWarmCache",
-          "spanName": "GET <front>"
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"largestContentfulPaint\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"largestContentfulPaint\"}[1m]))",
+          "instant": false,
+          "interval": "",
+          "key": "Q-505f909c-1512-491a-b41c-c0d5731ef8ea-0",
+          "legendFormat": "LCP",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"firstByte\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"firstByte\"}[1m]))",
+          "instant": false,
+          "key": "Q-aa965e13-fe86-4b93-969a-67103cfb0de3-1",
+          "legendFormat": "TTFB",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(rate(traces_spanmetrics_latency_sum{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\", span_name=\"firstContentfulPaint\"}[1m]) / rate(traces_spanmetrics_latency_count{service=\"Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache\",span_name=\"firstContentfulPaint\"}[1m]))",
+          "instant": false,
+          "key": "Q-b1eca1af-d431-4c73-8675-10640c1bbec1-2",
+          "legendFormat": "FCP",
+          "range": true,
+          "refId": "C"
         }
       ],
-      "title": "<front> anonymous umami",
-      "type": "table"
+      "title": "metrics",
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -531,8 +199,7 @@
                 "value": 80
               }
             ]
-          },
-          "unit": "none"
+          }
         },
         "overrides": []
       },
@@ -540,9 +207,9 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 24
+        "y": 1
       },
-      "id": 9,
+      "id": 6,
       "options": {
         "footer": {
           "countRows": false,
@@ -564,12 +231,11 @@
           "limit": 20,
           "queryType": "nativeSearch",
           "refId": "A",
-          "search": "service.version=\"${version}\"",
           "serviceName": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
           "spanName": "GET node/1"
         }
       ],
-      "title": "node/1 anonymous umami",
+      "title": "Traces",
       "type": "table"
     }
   ],
@@ -579,50 +245,16 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": [
-      {
-        "current": {
-          "selected": true,
-          "text": "11.0-dev",
-          "value": "11.0-dev"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "label": "Version",
-        "multi": false,
-        "name": "version",
-        "options": [
-          {
-            "selected": true,
-            "text": "11.0-dev",
-            "value": "11.0-dev"
-          },
-          {
-            "selected": false,
-            "text": "10.1.x-dev",
-            "value": "10.1.x-dev"
-          },
-          {
-            "selected": false,
-            "text": "10.0.x-dev",
-            "value": "10.0.x-dev"
-          }
-        ],
-        "query": "11.0-dev,10.1.x-dev,10.0.x-dev",
-        "queryValue": "",
-        "skipUrlSync": false,
-        "type": "custom"
-      }
-    ]
+    "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Umami",
-  "uid": "fTmhuXr4k",
-  "version": 4,
+  "title": "Umami (averages)",
+  "uid": "teMVIdjVz",
+  "version": 12,
   "weekStart": ""
 }
