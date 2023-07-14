@@ -30,6 +30,7 @@ metrics_generator:
       cluster: docker-compose
   processor:
     span_metrics:
+      wait: 60
       dimensions:
         - service.version
   storage:
