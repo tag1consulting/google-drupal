@@ -28,10 +28,6 @@ metrics_generator:
     external_labels:
       source: tempo
       cluster: docker-compose
-  processor:
-    span_metrics:
-      dimensions:
-        - service.version
   storage:
     path: /tmp/tempo/generator/wal
     remote_write:
