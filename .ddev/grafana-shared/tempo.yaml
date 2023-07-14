@@ -30,7 +30,6 @@ metrics_generator:
       cluster: docker-compose
   processor:
     span_metrics:
-      wait: 60
       dimensions:
         - service.version
   storage:
@@ -38,6 +37,7 @@ metrics_generator:
     remote_write:
       - url: http://prometheus:9090/api/v1/write
         send_exemplars: true
+  metrics_ingestion_time_range_slack: 2m
 
 storage:
   trace:
