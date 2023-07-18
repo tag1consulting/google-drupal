@@ -24,7 +24,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -59,7 +58,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
-            "drawStyle": "points",
+            "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
@@ -76,8 +75,8 @@
             "scaleDistribution": {
               "type": "linear"
             },
-            "showPoints": "auto",
-            "spanNulls": false,
+            "showPoints": "always",
+            "spanNulls": true,
             "stacking": {
               "group": "A",
               "mode": "none"
@@ -213,6 +212,7 @@
       },
       "id": 6,
       "options": {
+        "cellHeight": "sm",
         "footer": {
           "countRows": false,
           "fields": "",
@@ -223,7 +223,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "9.4.3",
+      "pluginVersion": "10.0.2",
       "targets": [
         {
           "datasource": {
@@ -277,8 +277,8 @@
       {
         "current": {
           "selected": false,
-          "text": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache",
-          "value": "Drupal_Tests_demo_umami_FunctionalJavascript_PerformanceTest_testNodePageWarmCache"
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "prometheus",
@@ -304,13 +304,13 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Umami",
   "uid": "teMVIdjVz",
-  "version": 30,
+  "version": 1,
   "weekStart": ""
 }
