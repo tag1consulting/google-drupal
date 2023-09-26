@@ -12,3 +12,10 @@ Automated performance testing and telemetry with Drupal core.
    series data to begin showing in the dashboard.
 1. Go to http://localhost:3000/dashboards to get started viewing metrics and
    traces.
+
+If you are running on an M1 or M2 Mac, add the following steps to get
+chromedriver working.
+
+1. `cd .ddev`
+1. `rm docker-compose.chromedriver.yml`
+1. `ddev get ddev/ddev-selenium-standalone-chrome`
