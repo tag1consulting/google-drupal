@@ -1,8 +1,5 @@
 {
   "patches": {
-    "drupal/core": {
-      "Issue #3352459 Log traces from performance tests to OpenTelemetry": "https://git.drupalcode.org/project/drupal/-/merge_requests/4226.diff"
-    }
   }
 }
 
