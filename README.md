@@ -1,5 +1,10 @@
 Automated performance testing and telemetry with Drupal core.
 
+To add Gander to an existing project, including a Drupal core clone, use this repo instead:
+https://github.com/tag1consulting/ddev-gander
+
+If you don't have a working Drupal project with ddev yet, you can use this repo for now.
+
 1. Install ddev
 1. Clone this repo.
 1. `ddev start`
